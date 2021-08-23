@@ -1,4 +1,5 @@
-import numpy as np
-import pandas as pd
+from board import Board
+from player import RandomPlayer
 
-print(np.zeros((10,10)))
+b = Board(RandomPlayer(1), RandomPlayer(-1))
+print(b.checkWin())

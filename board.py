@@ -27,13 +27,11 @@ class Board():
         self.b = np.zeros((3, 3))
         while self.checkWin() is None:
             move = self.p1.move(self.b)
-            self.b[tuple(move)] = self.p1.id
-            # print(self.b)
+            self.b[tuple(move)] = 1
             if self.checkWin() is not None:
                 break
             move = self.p2.move(self.b)
-            self.b[tuple(move)] = self.p2.id
-            # print(self.b)
+            self.b[tuple(move)] = -1
         return self.checkWin()
 
     def playGames(self,number_of_games):

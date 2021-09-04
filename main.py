@@ -1,5 +1,7 @@
 from board import Board
-from player import RandomPlayer
+from player import RandomPlayer,QPlayer
 
-b = Board(RandomPlayer(1), RandomPlayer(-1))
+
+b = Board(RandomPlayer(), RandomPlayer())
 print(b.playGames(1000))
+

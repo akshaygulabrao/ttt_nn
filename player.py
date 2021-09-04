@@ -8,9 +8,6 @@ class Player():
 
 
 class RandomPlayer(Player):
-    def __init__(self, id):
-        self.id = id
-
     def availableMoves(self,board):
         return np.argwhere(board == 0)
 
@@ -19,8 +16,7 @@ class RandomPlayer(Player):
 
 
 class QPlayer(Player):
-    def __init__(self,id):
-        self.id = id
-
     def availableMoves(self,board):
         return np.argwhere(board == 0)
+
+    
